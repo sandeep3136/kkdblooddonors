@@ -1,0 +1,53 @@
+{% extends "forminp/layout.html" %}
+{% load static %}
+{% load crispy_forms_tags %}  
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{% static 'forminp/css/style.css' %}">
+
+
+
+
+{% block body %}
+<div class="bg-dark d-flex flex-row justify-content-center sit">
+    <img src="{% static 'forminp/media/bd.png' %}"  alt="blood drop"> 
+    <h2>Kakinada Blood Donars</h2>
+</div>
+
+
+
+<div class="container">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="form-group marg">
+          <!-- <label>Name</label> -->
+          <!-- <input type="name" class="form-control" placeholder="Enter Name">   -->
+          {{form.name|as_crispy_field}}
+          
+        </div>
+        <div class="form-group marg">
+          <!-- <label>Blood Group</label> -->
+          <!-- <input class="form-control" placeholder="Enter blood group"> -->
+          {{form.blood_group|as_crispy_field}}
+        </div>
+
+        <div class="form-group marg">
+            <!-- <label>Area</label> -->
+            <!-- <input class="form-control" placeholder="Enter Area of Residence"> -->
+            {{form.area|as_crispy_field}}
+          </div>
+
+          <div class="form-group marg">
+            <!-- <label>Contact</label> -->
+            <!-- <input class="form-control" placeholder="Enter contact number"> -->
+            {{form.contact|as_crispy_field}}
+          </div>
+          
+          <button type="submit" class="btn btn-danger">Register as a donor</button>
+
+          </form>
+          
+</div>
+
+
+
+{% endblock %}
