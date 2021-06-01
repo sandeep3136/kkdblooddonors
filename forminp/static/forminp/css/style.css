@@ -32,6 +32,11 @@ body {
     background-color: rgb(247, 247, 247);
 }
 
+
+.messages{
+   color: red;
+}
+
 .form-control:focus{
     border-color: red;
     box-shadow: none; 

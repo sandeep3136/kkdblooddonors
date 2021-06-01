@@ -5,8 +5,6 @@
 <link rel="stylesheet" type="text/css" href="{% static 'forminp/css/style.css' %}">
 
 
-
-
 {% block body %}
 <div class="bg-dark d-flex flex-row justify-content-center sit">
     <img src="{% static 'forminp/media/bd.png' %}"  alt="blood drop"> 
@@ -46,6 +44,11 @@
 
           </form>
           
+          
+				{% for message in messages %}
+          <p class="messages" style="color: red; ">{{message}}</p>    
+        {% endfor %}
+  
 </div>
 
 

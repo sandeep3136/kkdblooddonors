@@ -1,5 +1,4 @@
 from django.db import models
-from phone_field import PhoneField
 
 # Create your models here.
 class Donor(models.Model):
@@ -8,6 +7,8 @@ class Donor(models.Model):
     area = models.CharField(max_length=50)
     contact = models.CharField(max_length=11)
 
+    class Meta:
+        unique_together = ["name", "contact"]
     def __str__(self):
         return self.name + " " + self.blood_group
     
