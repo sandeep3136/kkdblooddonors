@@ -1,3 +1,0 @@
-1. Dont allow duplicate data
-2. Apply filters on Area and Blood group wise
-3. Blood donation quotes on register page
